@@ -1,0 +1,12 @@
+.icons-clickeable{
+  padding: 3px;
+  background: $white;
+  color: $dark;
+  cursor: pointer;
+  transition: 0.4s all;
+  border-radius: 30px;
+  &:hover{
+    color: $white;
+    background: $dark;
+  }
+}

@@ -1,0 +1,22 @@
+.img-min{
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid;
+  transition: 0.225s all;
+  cursor: pointer;
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.img-min-user{
+  height: 40px;
+  border-radius: 50px;
+  transition: 0.225s all;
+  cursor: pointer;
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
+  }
+}
