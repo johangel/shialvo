@@ -18,7 +18,9 @@
         <div class="col-md-9 ">
           <div class="mb-2">
             <h1 class="font-weight-bold">Bienvenido a Chialvo</h1>
-            <small>Caterogia: nombre categoria</small>
+            <small>
+              Caterogia: {{$data['category']}}
+            </small>
           </div>
             <div class="shadow mb-5 p-2 bg-white rounded">
                 <table id="table" class="table table-striped table-bordered" style="width:100%">
@@ -34,15 +36,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                      @if(count($data['products']) > 0)
+                        @foreach($data['products'] as $products)
                         <tr>
                             <td class="text-center align-middle">
                               <img src="{{asset('assets/imgs/products/default.jpg')}}" class="img-min" alt="">
                             </td>
-                            <td class="text-center align-middle">lorem ipsum dolor sit amet..</td>
+                            <td class="text-center align-middle">{{$products->name}}</td>
                             <td class="text-center align-middle">
-                              400.00$
+                              {{$products->price}}.00$
                             </td>
-                            <td class="text-center align-middle">
+                            <td class="text-center align-middle width-100">
                               <input class="form-control" type="number" name="" value="">
                             </td>
                             <td class="text-center align-middle">
@@ -56,8 +60,11 @@
                             <td class="text-center align-middle">Amet</td>
                             <td class="text-center align-middle">
                               <i class="material-icons icons-clickeable">done</i>
+                              <i class="material-icons icons-clickeable">info</i>
                             </td>
                         </tr>
+                        @endforeach
+                      @endif
                     </tbody>
                 </table>
             </div>

@@ -10471,10 +10471,6 @@ a.text-dark:focus {
   }
 }
 
-label {
-  margin: 0;
-}
-
 .border-rounded {
   border-radius: 1000px;
 }
@@ -10527,6 +10523,22 @@ h3,
 h2,
 h1 {
   margin: 0;
+}
+
+.width-50 {
+  max-width: 50px;
+}
+
+.width-100 {
+  max-width: 100px;
+}
+
+.width-150 {
+  max-width: 150px;
+}
+
+.width-200 {
+  max-width: 200px;
 }
 
 .wrapper {
