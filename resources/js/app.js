@@ -7,6 +7,7 @@
 
 require('./bootstrap');
 require('./datables');
+// require('./datatablesresponsive');
 // window.Vue = require('vue');
 
 /**

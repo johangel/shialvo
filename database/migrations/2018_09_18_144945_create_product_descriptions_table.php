@@ -14,8 +14,8 @@ class CreateProductDescriptionsTable extends Migration
     public function up()
     {
         Schema::create('product_descriptions', function (Blueprint $table) {
-            $table->increments('id_product_description');
-            $table->integer('id_product_reference');
+            $table->increments('id');
+            $table->integer('id_product');
             $table->text('description');
             $table->string('picture');
             $table->string('title');

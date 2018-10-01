@@ -8,13 +8,24 @@
                 <a href="#category1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categoria 1</a>
                 <ul class="collapse list-unstyled" id="category1">
                     <li>
-                        <a href="#">Sub Categoria</a>
-                    </li>
-                    <li>
-                        <a href="#">Sub Categoria</a>
-                    </li>
-                    <li>
-                        <a href="#">Sub Categoria</a>
+
+                      <ul class="list-unstyled components p-0">
+                        <li class="">
+                            <a href="#Sub_category1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SUb Categoria 1</a>
+                            <ul class="collapse list-unstyled" id="Sub_category1">
+                                <li>
+                                    <a href="#">Sub - Sub Categoria</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sub - Sub Categoria</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sub - Sub Categoria</a>
+                                </li>
+                            </ul>
+                        </li>
+                      </ul>
+
                     </li>
                 </ul>
             </li>

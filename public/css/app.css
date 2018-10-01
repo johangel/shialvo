@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url("");
+
+/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10477,8 +10479,8 @@ a.text-dark:focus {
 
 .icons-clickeable {
   padding: 3px;
-  background: #fff;
-  color: #343a40;
+  background: #6cb2eb;
+  color: #fff;
   cursor: pointer;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
@@ -10486,8 +10488,8 @@ a.text-dark:focus {
 }
 
 .icons-clickeable:hover {
-  color: #fff;
-  background: #343a40;
+  color: #6cb2eb;
+  background: #fff;
 }
 
 .img-min {

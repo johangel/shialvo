@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
 
     <div class="row justify-content-center">
+
         <div class="col-md-3">
 
             <div class="m-0 rounded">
@@ -15,82 +17,21 @@
             </div>
 
         </div>
+
         <div class="col-md-9 ">
-          <div class="mb-2">
+          <div class="mt-2">
             <h1 class="font-weight-bold">Bienvenido a Chialvo</h1>
             <small>
               Caterogia: {{$data['category']}}
             </small>
           </div>
-            <div class="shadow mb-5 p-2 bg-white rounded">
-                <table id="table" class="table table-striped table-bordered" style="width:100%">
-                    <thead class="">
-                        <tr>
-                            <th class="text-center">foto</th>
-                            <th class="text-center">Descripcion</th>
-                            <th class="text-center">Precio</th>
-                            <th class="text-center">cantidad</th>
-                            <th class="text-center">atributos</th>
-                            <th class="text-center">subtotal</th>
-                            <th class="text-center">accion</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      @if(count($data['products']) > 0)
-                        @foreach($data['products'] as $products)
-                        <tr>
-                            <td class="text-center align-middle">
-                              <img src="{{asset('assets/imgs/products/default.jpg')}}" class="img-min" alt="">
-                            </td>
-                            <td class="text-center align-middle">{{$products->name}}</td>
-                            <td class="text-center align-middle">
-                              {{$products->price}}.00$
-                            </td>
-                            <td class="text-center align-middle width-100">
-                              <input class="form-control" type="number" name="" value="">
-                            </td>
-                            <td class="text-center align-middle">
-                              <select class="custom-select">
-                                <option selected>List attr</option>
-                                <option value="1">attr 1</option>
-                                <option value="2">attr 2</option>
-                                <option value="3">attr 3</option>
-                              </select>
-                            </td>
-                            <td class="text-center align-middle">Amet</td>
-                            <td class="text-center align-middle">
-                              <i class="material-icons icons-clickeable">done</i>
-                              <i class="material-icons icons-clickeable">info</i>
-                            </td>
-                        </tr>
-                        @endforeach
-                      @endif
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
+          <div class="shadow mb-5 p-2 bg-white rounded">
+              @include('tables.allProducts')
+          </div>
     </div>
 
 </div>
 
-<script>
-    $(document).ready( function () {
-      $('#table').DataTable({
-        "language": {
-          "lengthMenu": "Mostrar _MENU_ por páginas",
-          "info": "Mostrando página _PAGE_ de _PAGES_",
-          "sSearch":         "Buscar:",
-          "sZeroRecords":    "No se encontraron resultados",
-          "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-          "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-          "oPaginate": {
-            "sFirst":    "Primero",
-            "sLast":     "Último",
-            "sNext":     "Siguiente",
-            "sPrevious": "Anterior"
-          },
-        }
-      });
-    });
-</script>
+
 @endsection

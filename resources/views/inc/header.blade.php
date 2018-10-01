@@ -12,6 +12,20 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto" aria-expanded="true">
 
+                      @guest
+                      @else
+                        @can('roles.index')
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ route('roles.index')}}">Ver Roles</a>
+                          </li>
+                        @endcan('roles.index')
+                        @can('products_description.edit')
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ route('products.administrate')}}">Administrar Productos</a>
+                          </li>
+                        @endcan('products_description.edit')
+
+                      @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -19,13 +33,13 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @else
-                            <li class="nav-item d-flex align-items-center">
+                            <li class="nav-item d-flex align-items-center ">
                               <small class="nav-link bg-light text-dark border-rounded">Presupuesto: $450.66</small>
                             </li>
                             <li class="nav-item dropdown">
