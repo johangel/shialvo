@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="container">
-
+  <h2>Carrito de compras</h2>
+  <hr>
   @if(count($items) > 0)
   <div class="card">
     <table class="table table-hover shopping-cart-wrap">
@@ -11,7 +12,7 @@
           <th scope="col">Producto</th>
           <th scope="col" width="120">Cantidad</th>
           <th scope="col" width="120">Precio</th>
-          <th scope="col" width="100" class="text-right">Accion</th>
+          <!-- <th scope="col" width="100" class="text-right">Accion</th> -->
         </tr>
       </thead>
       <tbody>
@@ -28,6 +29,9 @@
                   <dt>Color: </dt>
                   <dd>{{$item->itemAttr ?? "estandar"}}</dd>
                 </dl>
+                <dl class="param param-inline small">
+                  <dt><a href="#" class="alert-link text-info">eliminar</a></dt>
+                </dl>
               </figcaption>
             </figure>
           </td>
@@ -40,9 +44,9 @@
               <small class="text-muted">({{$item->unitPrice}}$ c/u)</small>
             </div> <!-- price-wrap .// -->
           </td>
-          <td class="text-right">
+          <!-- <td class="text-right">
             <a href="" class="btn btn-outline-danger"> <i class="material-icons">clear</i> </a>
-          </td>
+          </td> -->
         </tr>
         @endforeach
       </tbody>
@@ -58,6 +62,11 @@
     <div class="col-md-12">
       <button type="button" class="btn btn-sm btn-success" name="button">confirmar compra</button>
     </div>
+  </div>
+  @else
+  <div class="card p-4">
+    <p>No tienes objetos agregados a tu carrito de compras</p>
+    <small class="text-muted"> <a  href="{{ url('/') }}">volver a tienda</a> </small>
   </div>
   @endif
 

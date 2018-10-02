@@ -6,19 +6,7 @@
 
     <div class="row justify-content-center">
 
-        <div class="col-md-3">
-
-            <div class="m-0 rounded">
-                <input type="text" class="form-control border-rounded" id="exampleFormControlInput1" placeholder="buscar">
-            </div>
-
-            <div class="shadow-sm mt-2 bg-white rounded">
-                @include('inc.sidebar')
-            </div>
-
-        </div>
-
-        <div class="col-md-9 ">
+        <div class="col-md-12">
           <div class="mt-2">
             <h1 class="font-weight-bold">Bienvenido a Chialvo</h1>
             <small>

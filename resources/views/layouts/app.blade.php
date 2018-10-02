@@ -34,11 +34,32 @@
 
         @include('inc.notifications')
 
-        <main class="py-3">
-            <div class="wrapper">
-                @yield('content')
+
+        <!-- Sidebar -->
+        @guest
+          <div id="wrapper" class="" style="margin-top: 72px;">
+
+        @else
+          <div id="wrapper" class="toggled" style="margin-top: 72px;">
+          @include('inc.sidebar')
+        @endguest
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <main class="py-3">
+
+                <div class="wrapper">
+                  @yield('content')
+                </div>
+              </main>
+
             </div>
-        </main>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+</div>
 
     </div>
 

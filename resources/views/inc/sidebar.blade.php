@@ -1,48 +1,46 @@
-<nav id="sidebar" class="shadow">
-        <div class="sidebar-header bg-white">
-            <h4 class="text-dark">Categorias</h4>
-        </div>
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand p-2">
+          <input type="text" class="form-control border-rounded" id="exampleFormControlInput1" placeholder="buscar">
+        </li>
+        <li>
+            <a href="#">Dashboard</a>
+        </li>
+        <li>
+            <a href="#">Shortcuts</a>
+        </li>
+        <li>
+            <a href="#">Overview</a>
+        </li>
+        <li>
+            <a href="#">Events</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
 
-        <ul class="list-unstyled components p-0">
-            <li class="">
-                <a href="#category1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categoria 1</a>
-                <ul class="collapse list-unstyled" id="category1">
-                    <li>
+    </ul>
+</div>
 
-                      <ul class="list-unstyled components p-0">
-                        <li class="">
-                            <a href="#Sub_category1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SUb Categoria 1</a>
-                            <ul class="collapse list-unstyled" id="Sub_category1">
-                                <li>
-                                    <a href="#">Sub - Sub Categoria</a>
-                                </li>
-                                <li>
-                                    <a href="#">Sub - Sub Categoria</a>
-                                </li>
-                                <li>
-                                    <a href="#">Sub - Sub Categoria</a>
-                                </li>
-                            </ul>
-                        </li>
-                      </ul>
+<script>
+$(window).resize(function () {
+  console.log(window.outerWidth)
+      if (window.outerWidth <= 801) {
+        $("#wrapper").removeClass("toggled");
+      }else{
+        $("#wrapper").addClass("toggled");
+      }
+      });
 
-                    </li>
-                </ul>
-            </li>
-
-            <li class="">
-                <a href="#category2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categoria 2</a>
-                <ul class="collapse list-unstyled" id="category2">
-                    <li>
-                        <a href="#">Sub Categoria</a>
-                    </li>
-                    <li>
-                        <a href="#">Sub Categoria</a>
-                    </li>
-                    <li>
-                        <a href="#">Sub Categoria</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    $("#menu-toggle").click(function(e) {
+        c
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>

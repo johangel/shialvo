@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" style="min-height: 72px;">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('assets/imgs/logo_red.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
                     {{ config('app.name', 'Laravel') }}
@@ -50,7 +49,15 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a  href="{{ route('shop-cart.index') }}" class="dropdown-item d-flex align-items-center justify-content-around" href="#">Carrito <i class="material-icons">shopping_cart</i></a>
+                                    <a  href="{{ route('shop-cart.index') }}" class="dropdown-item d-flex align-items-center justify-content-around" href="#">
+                                      Carrito
+                                      <i class="material-icons">shopping_cart</i>
+                                      @if (count(json_decode(Cookie::get('itemsShopCart'))) > 0)
+                                        <span class="badge badge-primary">
+                                          {{ count(json_decode(Cookie::get('itemsShopCart'))) }}
+                                        </span>
+                                     @endif
+                                    </a>
                                     <a class="dropdown-item d-flex align-items-center justify-content-around" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                       {{ __('Logout') }}
                                       <i class="material-icons">eject</i>
@@ -63,5 +70,4 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
         </nav>
