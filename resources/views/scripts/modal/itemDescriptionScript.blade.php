@@ -1,6 +1,6 @@
 <script type="text/javascript">
 
-    var itemId, itemAmount, itemAttr, unitPrice, mayorPrice;
+    var itemId, itemAmount, itemAttr, unitPrice, mayorPrice, itemName;
 
     function openItemInModal(id){
       var url = "{{  url('/') }}/api/product/" + id;
@@ -28,15 +28,19 @@
   function confirmProduct(){
     itemAmount  = $('#amountItem').val();
     itemAttr    = $('#attrItem').val();
-    var url = "{{  url('/') }}/api/ShoppingCart/store";
+    itemName    = $('#Modal_title').html()
+    var url     = "{{  url('/') }}/ShoppingCart/store";
 
     var item = {
-      itemId         : itemId,
+      itemId      : itemId,
       itemAmount : itemAmount,
       itemAttr   : itemAttr,
       unitPrice  : unitPrice,
-      mayorPrice : mayorPrice
+      mayorPrice : mayorPrice,
+      itemName   : itemName
     };
+
+    console.log(item);
 
     axios.post(url, item).then(response =>{
       console.log(response);

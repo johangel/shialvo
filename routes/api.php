@@ -18,7 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-  Route::post('ShoppingCart/store', 'ShoppingCart@store');
-
-
 Route::get('product/{id}', 'ProductController@show');

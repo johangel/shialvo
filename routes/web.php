@@ -47,4 +47,10 @@ Route::middleware(['auth'])->group(function (){
 
     Route::post('products/ImportProducts', 'Excelcontroller@importProducts')->middleware('permission:products.import');
 
+  //Shopcart
+
+    Route::get('shop-cart', 'ShoppingCart@index')->name('shop-cart.index');
+
+    Route::post('ShoppingCart/store', 'ShoppingCart@store');
+
 });

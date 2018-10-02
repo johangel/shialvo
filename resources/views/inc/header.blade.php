@@ -50,12 +50,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                    <a  href="{{ route('shop-cart.index') }}" class="dropdown-item d-flex align-items-center justify-content-around" href="#">Carrito <i class="material-icons">shopping_cart</i></a>
+                                    <a class="dropdown-item d-flex align-items-center justify-content-around" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                      {{ __('Logout') }}
+                                      <i class="material-icons">eject</i>
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
