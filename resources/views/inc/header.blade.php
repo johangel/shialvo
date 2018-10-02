@@ -1,4 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" style="min-height: 72px;">
+                <button id="menu-toggle" class="btn btn-dark d-none d-md-block" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('assets/imgs/logo_red.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
                     {{ config('app.name', 'Laravel') }}
@@ -43,7 +46,6 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <!-- {{ Auth::user()->name }} <span class="caret"></span> -->
                                     <img src="{{asset('assets/imgs/users/default.jpg')}}" class="img-min-user" alt="">
 
                                 </a>

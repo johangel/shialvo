@@ -48,7 +48,7 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-              <main class="py-3">
+              <main>
 
                 <div class="wrapper">
                   @yield('content')

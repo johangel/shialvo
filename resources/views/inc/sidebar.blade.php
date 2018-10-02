@@ -1,5 +1,5 @@
 <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
+    <ul class="sidebar-nav mt-4">
         <li class="sidebar-brand p-2">
           <input type="text" class="form-control border-rounded" id="exampleFormControlInput1" placeholder="buscar">
         </li>
@@ -33,13 +33,15 @@ $(window).resize(function () {
   console.log(window.outerWidth)
       if (window.outerWidth <= 801) {
         $("#wrapper").removeClass("toggled");
+        $("#wrapper").addClass('hidden');
       }else{
-        $("#wrapper").addClass("toggled");
+        $("#wrapper").removeClass('hidden');
+
       }
       });
 
     $("#menu-toggle").click(function(e) {
-        c
+
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
